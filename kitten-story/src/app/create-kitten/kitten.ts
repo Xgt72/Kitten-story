@@ -1,3 +1,5 @@
+// Class Kitten
+
 export class Kitten {
     name: string;
     race: string;

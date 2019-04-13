@@ -10,7 +10,6 @@ li {
 }
 
 button {
-    /* background-color: #c0ebff; */
     color: black;
     box-shadow: 3px 3px 1px gray;
 }
@@ -18,7 +17,3 @@ button {
 input {
     padding: 0.5rem;
 }
-
-/* .validForm {
-    background-color: "#00ea2";
-} */

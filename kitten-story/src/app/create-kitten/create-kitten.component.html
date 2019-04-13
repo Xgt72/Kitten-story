@@ -34,7 +34,7 @@
         </li>
       </ul>
       <button class="btn btn-primary"
-        [ngStyle]="{'background-color':getColorValidButton(cat.name, cat.race, cat.birthDate)}" type="submit">Ajouter ce
+        [style.backgroundColor]="createKitten.invalid ? '#c0ebff' : '#42f450'" type="submit">Ajouter ce
         nouveau chaton</button>
     </form>
   </div>

@@ -9,7 +9,6 @@ import { RacineComponent } from './racine/racine.component';
 import { CreateKittenComponent } from './create-kitten/create-kitten.component';
 import { ListKittenComponent } from './list-kitten/list-kitten.component';
 import { UserKittenComponent } from './user-kitten/user-kitten.component';
-import { KittenProfilComponent } from './kitten-profil/kitten-profil.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +16,7 @@ import { KittenProfilComponent } from './kitten-profil/kitten-profil.component';
     RacineComponent,
     CreateKittenComponent,
     ListKittenComponent,
-    UserKittenComponent,
-    KittenProfilComponent
+    UserKittenComponent
   ],
   imports: [
     BrowserModule,
