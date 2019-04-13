@@ -1,0 +1,40 @@
+  <div class="card d-flex justify-content-center">
+    <form (ngSubmit)="createKitten.valid && createCat()" #createKitten="ngForm" class="card-body">
+      <h2 class="card-title">Ajouter un nouveau chaton</h2>
+      <p class="card-text">Pour cela remplissez le formulaire ci-dessous.</p>
+      <ul>
+        <li>
+          <label class="m-2" for="catname">Nom: </label>
+          <input class="m-2" [(ngModel)]="cat.name" type="text" name="catname" #catName="ngModel" placeholder="Garine"
+            required />
+        </li>
+        <div *ngIf="catName.errors && createKitten.submitted">
+          <span *ngIf="catName.errors.required">Le champs est requis</span>
+        </div>
+        <li>
+          <label class="m-2" for="catrace">Race: </label>
+          <input class="m-2" [(ngModel)]="cat.race" type="text" name="catrace" #catRace="ngModel"
+            placeholder="Bleu Russe" required />
+        </li>
+        <div *ngIf="catRace.errors && createKitten.submitted">
+          <span *ngIf="catRace.errors.required">Le champs est requis</span>
+        </div>
+        <li>
+          <label class="m-2" for="catbirthdate">Date de naissance: </label>
+          <input class="m-2" [(ngModel)]="cat.birthDate" type="date" name="catbirthdate" #catBirthDate="ngModel"
+            placeholder="06/07/2010" required />
+        </li>
+        <div *ngIf="catBirthDate.errors && createKitten.submitted">
+          <span *ngIf="catRace.errors.required">Le champs est requis</span>
+        </div>
+        <li>
+          <label class="m-2" for="catpicture">Lien vers une photo: </label>
+          <input class="m-2" [(ngModel)]="cat.pictureLink" type="text" name="catpicturelink" #catPicture="ngModel"
+            placeholder="http://........." />
+        </li>
+      </ul>
+      <button class="btn btn-primary"
+        [ngStyle]="{'background-color':getColorValidButton(cat.name, cat.race, cat.birthDate)}" type="submit">Ajouter ce
+        nouveau chaton</button>
+    </form>
+  </div>
