@@ -23,8 +23,10 @@ import { UserKittenComponent } from './user-kitten/user-kitten.component';
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      {path:"create-kitten", component: CreateKittenComponent, pathMatch: "full" },
-      { path:"", redirectTo:"user-kitten", pathMatch:"full" },
+      { path:"create-kitten", component: CreateKittenComponent, pathMatch: "full" },
+      { path:"list-kitten", component: ListKittenComponent, pathMatch: "full" },
+      { path:"user-kitten", component: UserKittenComponent, pathMatch: "full" },
+      { path:"", redirectTo:"create-kitten", pathMatch:"full" },
       
     ])
   ],

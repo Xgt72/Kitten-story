@@ -1,17 +1,19 @@
-<div class="card p-2">
-  <h2 class="card-title">Voici les chatons que vous pouvez adoptez</h2>
-  <div class="card-body p-0 m-0 justify-content-center">
-    <ul class="m-3 p-3">
-      <li *ngFor="let cat of kittens" class="my-2 p-2">
-        <img class="catImg" [src]="cat.pictureLink" [alt]="cat.name" />
-        <div class="description">
-          <p class="catName">Nom: {{cat.name}}</p>
-          <p class="catRace">Race: {{cat.race}}</p>
-          <p class="catBirthDate">Date de naissance: {{cat.birthDate}}</p>
-        </div>
-        <button class="btn btn-primary"
-          (click)="adoptCat(cat.name, cat.race, cat.birthDate, cat.pictureLink, cat)">Adopter ce chaton</button>
-      </li>
-    </ul>
+<div class="col-12 my-2 p-2">
+  <div class="card p-2">
+    <h2 class="card-title">Voici les chatons que vous pouvez adoptez</h2>
+    <div class="card-body p-0 m-0 justify-content-center">
+      <ul class="m-3 p-3">
+        <li *ngFor="let cat of kittens" class="my-2 p-2">
+          <img class="catImg" [src]="cat.pictureLink" [alt]="cat.name" />
+          <div class="description">
+            <p class="catName">Nom: {{cat.name}}</p>
+            <p class="catRace">Race: {{cat.race}}</p>
+            <p class="catBirthDate">Date de naissance: {{cat.birthDate}}</p>
+          </div>
+          <button class="btn btn-primary"
+            (click)="adoptCat(cat.name, cat.race, cat.birthDate, cat.pictureLink, cat)">Adopter ce chaton</button>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

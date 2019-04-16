@@ -1,15 +1,17 @@
-<div class="card p-2">
-  <h2 class="card-title">Ma liste de chatons</h2>
-  <div class="card-body p-0 m-0 justify-content-center">
-    <ul class="m-3 p-3">
-      <li *ngFor="let cat of MyCatsList" class="my-2 p-2">
-        <img [src]="cat.pictureLink" [alt]="cat.name" />
-        <div class="information">
-          <p>Nom: {{cat.name}}</p>
-          <p>Race: {{cat.race}}</p>
-          <p>Date de naissance: {{cat.birthDate}}</p>
-        </div>
-      </li>
-    </ul>
+<div class="col-12 my-2 p-2">
+  <div class="card p-2">
+    <h2 class="card-title">Ma liste de chatons</h2>
+    <div class="card-body p-0 m-0 justify-content-center">
+      <ul class="m-3 p-3">
+        <li *ngFor="let cat of MyCatsList" class="my-2 p-2">
+          <img [src]="cat.pictureLink" [alt]="cat.name" />
+          <div class="information">
+            <p>Nom: {{cat.name}}</p>
+            <p>Race: {{cat.race}}</p>
+            <p>Date de naissance: {{cat.birthDate}}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
